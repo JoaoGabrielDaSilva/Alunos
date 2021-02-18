@@ -1,4 +1,4 @@
-import sequelize from 'sequelize';
+import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
 
 class DataBase {

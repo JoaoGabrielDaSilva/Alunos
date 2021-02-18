@@ -1,13 +1,10 @@
-import { Sequelize, QueryTypes } from 'sequelize';
-import databaseConfig from '../../database';
-console.log(databaseConfig);
-const sequelize = new Sequelize(databaseConfig);
+import StudentService from '../services/StudentService';
+
+const service = new StudentService();
 
 class StudentController {
   async index(request, response) {
-    const resultado = await sequelize.query('select * from aluno', {
-      type: QueryTypes.SELECT,
-    });
+    const resultado = await service.get();
     response.json(resultado);
   }
 

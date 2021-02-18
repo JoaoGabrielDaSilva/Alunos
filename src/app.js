@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import routers from './app/routers';
 import middlewares from './app/middlewares';
-// import './database';
+import './database';
 
 class App {
   constructor() {
