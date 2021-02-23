@@ -5,8 +5,8 @@ const routes = new Router();
 
 routes.get('/student', StudentController.index);
 routes.get('/student/:id', StudentController.show);
-routes.post('/students', StudentController.store);
-routes.put('/students/:id', StudentController.update);
-routes.post('/students/:id', StudentController.delete);
+routes.post('/student', StudentController.store);
+routes.put('/student/:id', StudentController.update);
+routes.delete('/student/:id', StudentController.delete);
 
 export default routes;

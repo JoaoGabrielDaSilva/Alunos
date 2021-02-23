@@ -8,20 +8,32 @@ class StudentController {
     response.json(resultado);
   }
 
-  show(request, response) {
-    response.json({});
+  async show(request, response) {
+    const resultado = await service.getUser(5);
+    response.json(resultado);
   }
 
-  store(request, response) {
-    response.json({});
+  async store(request, response) {
+    const resultado = await service.store(
+      20,
+      'Leoni',
+      36,
+      true,
+      1,
+      false,
+      '2004-02-14'
+    );
+    response.json(resultado);
   }
 
-  update(request, response) {
-    response.json({});
+  async update(request, response) {
+    const resultado = await service.update(5, 'nome', 'idade');
+    response.json(resultado);
   }
 
-  delete(request, response) {
-    response.json({});
+  async delete(request, response) {
+    const resultado = await service.delete(5);
+    response.sendStatus(202);
   }
 }
 
